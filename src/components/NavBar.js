@@ -1,10 +1,9 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import CartWidget from './CartWidget';
 
-function NavBar() {
+function NavBar(props) {
     return (
-      <div className="Nav">
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="Nav" >
+        <nav className="navbar navbar-expand-lg">
     <a className="navbar-brand" href="#">Little Fox</a>
     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
@@ -25,13 +24,16 @@ function NavBar() {
           <a className="nav-link" href="#">Animales</a>
         </li>
         <li className="nav-item my-2 my-lg-0">
+          <a className="nav-link" href="#">Muñecas</a>
+        </li>
+        <li className="nav-item my-2 my-lg-0">
           <a className="nav-link" href="#">Personajes</a>
         </li>
         <li className="nav-item my-2 my-lg-0">
           <a className="nav-link" href="#">Para bebes</a>
         </li>
       </ul>
-      <div className="navbar-text"><a className="nav-link" href="#">Carrito <FontAwesomeIcon icon={ faShoppingCart } /></a></div>
+      <CartWidget />
       
       
     </div>

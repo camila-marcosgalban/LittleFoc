@@ -36,3 +36,38 @@
     transform: rotate(360deg);
   }
 }
+
+.App{
+  background-color: #D2E1EE;
+  padding-bottom: 3rem;
+}
+
+.Nav{
+  background-color: #E4D3B4 ;
+}
+
+.Nav a{
+  font-family: 'Amatic SC', cursive;
+  font-size: larger;
+  color: #AD9371;
+}
+
+.Nav a:hover{
+  color: #5f4727;
+}
+
+/*items*/
+
+.ItemListContainer{
+  padding-top: 1rem;
+}
+
+.card{
+  margin: 0.5rem;
+  padding: 0.5rem;
+  width: 30%;
+}
+
+.card .btnCardItems{
+    background-color: #CAC1EB;
+}
