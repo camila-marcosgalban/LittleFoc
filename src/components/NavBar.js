@@ -1,8 +1,10 @@
+import React from "react";
 import CartWidget from './CartWidget';
 
 function NavBar(props) {
     return (
-      <div className="Nav" >
+      <React.Fragment >
+        <div className="Nav">
         <nav className="navbar navbar-expand-lg">
     <a className="navbar-brand" href="#">Little Fox</a>
     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,7 +40,8 @@ function NavBar(props) {
       
     </div>
   </nav>
-      </div>
+        </div>
+      </React.Fragment>
     );
   }
   

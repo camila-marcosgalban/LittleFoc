@@ -1,15 +1,19 @@
+import React from "react";
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 
 
+
 function App() {
   return (
-    <div className="App">
- <NavBar/>
+    <React.Fragment>
+      <div className="App">
+      <NavBar/>
       <ItemListContainer greeting="Lista de productos"/>
-    </div>
+      </div>
+    </React.Fragment>
   );
 }
 
