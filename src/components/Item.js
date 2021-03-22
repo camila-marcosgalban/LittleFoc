@@ -15,7 +15,7 @@ import ItemCount from "./ItemCount";
 <img src={item.url} className="card-img-top" alt="..." />
 <div className="card-body">
   <h5 className="card-title">{item.title}</h5>
-  <ItemDetailContainer item={item}/>
+  <ItemDetailContainer/>
   <ItemCount stock={15} initial={1} onAdd={onAdd} />
 </div>
 </div>

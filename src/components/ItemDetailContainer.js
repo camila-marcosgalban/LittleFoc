@@ -13,9 +13,9 @@ function ItemDetailContainer() {
       setTimeout(() => {
         Resolve([
             {id: 1,description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', price: '$1500'},
-            {id: 2,description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', price: '$800'},
-            {id: 3,description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', price: '$1000'},
-            {id: 4,description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', price: '$650'}
+            // {id: 2,description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', price: '$800'},
+            // {id: 3,description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', price: '$1000'},
+            // {id: 4,description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', price: '$650'}
         ]);
       }, 2000);
     }).then((resultado) => setItems(resultado));
@@ -29,7 +29,9 @@ function ItemDetailContainer() {
       >Ver Detalle</button>
       <Collapse in={open}>
         <div id={items.id}>
-        <ItemDetail item={items}/>
+        {items.map((x, index) => (
+      <ItemDetail key={index} items={x} />
+    ))}
         </div>
       </Collapse>
          </React.Fragment>
