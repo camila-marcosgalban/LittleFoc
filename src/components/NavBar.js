@@ -1,12 +1,16 @@
 import React from "react";
+import {
+  NavLink,
+  Redirect
+} from "react-router-dom";
 import CartWidget from './CartWidget';
 
-function NavBar(props) {
+function NavBar() {
     return (
       <React.Fragment >
         <div className="Nav">
         <nav className="navbar navbar-expand-lg">
-    <a className="navbar-brand" href="#">Little Fox</a>
+        <NavLink className="navbar-brand" to ="/">Little Fox</NavLink>
     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -14,25 +18,28 @@ function NavBar(props) {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav mr-auto">
         <li className="nav-item active">
-          <a className="nav-link" href="#"><span className="sr-only">Little Fox</span></a>
+        <NavLink className="nav-link" to ="/"><span className="sr-only">Little Fox</span></NavLink>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">¿Qué es amigurumi?</a>
+        <NavLink className="nav-link" to ="/info/QueEs">¿Qué es amigurumi?</NavLink>
         </li>
         <li className="nav-item my-2 my-lg-0">
-          <a className="nav-link" href="#">Info antes de comprar</a>
+        <NavLink className="nav-link" to ="/info/Info">Info antes de comprar</NavLink>
         </li>
         <li className="nav-item my-2 my-lg-0">
-          <a className="nav-link" href="#">Animales</a>
+          <NavLink className="nav-link" to ="/Category/C1">Animales</NavLink>
         </li>
         <li className="nav-item my-2 my-lg-0">
-          <a className="nav-link" href="#">Muñecas</a>
+          <NavLink className="nav-link" to ="/Category/C2">Muñecas</NavLink>
         </li>
         <li className="nav-item my-2 my-lg-0">
-          <a className="nav-link" href="#">Personajes</a>
+          <NavLink className="nav-link" to ="/Category/C3">Personajes</NavLink>
         </li>
         <li className="nav-item my-2 my-lg-0">
-          <a className="nav-link" href="#">Para bebes</a>
+          <NavLink className="nav-link" to ="/Category/C4">Para bebes</NavLink>
+        </li>
+        <li className="nav-item my-2 my-lg-0">
+          <NavLink className="nav-link" to ="/info/Contacto">Contacto</NavLink>
         </li>
       </ul>
       <CartWidget />

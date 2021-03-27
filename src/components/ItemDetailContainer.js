@@ -1,39 +1,31 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
-import Collapse from 'react-bootstrap/Collapse'
-import Button from 'react-bootstrap/Button'
+import {Products} from "../components/Products";
 
 function ItemDetailContainer() {
-  const [items, setItems] = useState([]);
-  const [open, setOpen] = useState(false);
+  const {itemId} = useParams();
+  const [detail, setDetail] = useState([]);
 
   useEffect(() => {
     new Promise((Resolve, Reject) => {
       setTimeout(() => {
-        Resolve([
-            {id: 1,description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', price: '$1500'},
-            // {id: 2,description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', price: '$800'},
-            // {id: 3,description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', price: '$1000'},
-            // {id: 4,description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', price: '$650'}
-        ]);
+        Resolve(Products);
       }, 2000);
-    }).then((resultado) => setItems(resultado));
+    }).then((resultado) => {
+      const i = resultado.filter(x => x.id === (itemId));
+      setDetail(i)
   });
+});
+
       return (
          <React.Fragment className="container-fluid">
-           <button
-        onClick={() => setOpen(!open)}
-        aria-controls="example-collapse-text"
-        aria-expanded={open}
-      >Ver Detalle</button>
-      <Collapse in={open}>
-        <div id={items.id}>
-        {items.map((x, index) => (
-      <ItemDetail key={index} items={x} />
+        <div>
+        {detail.map((x, index) => (
+      <ItemDetail key={index} detail={x} />
     ))}
         </div>
-      </Collapse>
          </React.Fragment>
        );
       
