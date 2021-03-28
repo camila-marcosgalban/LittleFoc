@@ -27,6 +27,7 @@ function App() {
         <Route path="/info/Contacto"><Contacto/></Route>
         <Route path="/Cart"><Cart/></Route>
         <Route path="/item/:itemId"><ItemDetailContainer/></Route> 
+        <Route path="/Category/item/:itemId"><ItemDetailContainer/></Route> 
         <Route path="/Category/:idCat"><ItemListContainer/></Route>
         <Route path="/Category/:idCat"><ItemListContainer/></Route>
         <Route path="/Category/:idCat"><ItemListContainer/></Route>
