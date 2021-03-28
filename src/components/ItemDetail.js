@@ -1,9 +1,28 @@
 import React from "react";
 import ItemCount from "./ItemCount";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
  function ItemDetail({detail}) {
+  const maxStock = 15;
+  const minStock = 1;
+  const [ stock, setStock] = useState (maxStock);
+  const [ viewBtn, setViewBtn] = useState ("hide");
+  const [ viewCount, setViewCount] = useState ("show");
+
   const onAdd = (e, q) => {
-    alert (`Agregaste ${q} elementos al carrito`)
+    e.preventDefault();
+    if(stock < minStock){
+      alert('no hay stock');
+    }else if(q <= stock){
+      setStock(stock - q);
+      console.log(stock - q)
+      alert (`Agregaste ${q} elementos al carrito`)
+      setViewBtn("show");
+      if((stock - q) <= 0){
+        setViewCount("hide");
+      }
+      }
   }
 
   return (
@@ -16,7 +35,11 @@ import ItemCount from "./ItemCount";
         <p className="card-text">{detail.description}</p>
   <p className="card-text">Precio: {detail.price}</p>
         </div>
-  <ItemCount stock={15} initial={1} onAdd={onAdd} />
+        <p>Stock: {stock}</p>
+  <div className={viewCount}><ItemCount stock={stock} initial={1} onAdd={onAdd} /></div>
+  <NavLink className="nav-link mx-5" to ="/Cart">
+  <button className={`${viewBtn} mt-2`}>Terminar mi compra</button>
+  </NavLink>
 </div> 
 </div>
     </React.Fragment>

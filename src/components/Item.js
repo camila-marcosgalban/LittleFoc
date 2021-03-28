@@ -8,9 +8,6 @@ import ItemDetailContainer from "./ItemDetailContainer";
 import ItemCount from "./ItemCount";
 
  function Item({item}) {
-  const onAdd = (e, q) => {
-    alert (`Agregaste ${q} elementos al carrito`)
-  }
 
   return (
     <React.Fragment>
@@ -21,7 +18,6 @@ import ItemCount from "./ItemCount";
   <NavLink className="nav-link" to ={`Item/${item.id}`}>
   <Button>Ver Detalle</Button>
   </NavLink>
-  <ItemCount stock={15} initial={1} onAdd={onAdd} />
 </div> 
 </div>
     </React.Fragment>

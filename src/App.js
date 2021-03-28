@@ -12,6 +12,7 @@ import ItemDetailContainer from "./components/ItemDetailContainer";
 import QueEs from './info/QueEs';
 import Info from './info/Info';
 import Contacto from './info/Contacto';
+import Cart from './components/Cart';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/info/QueEs"><QueEs/></Route>
         <Route path="/info/Info"><Info/></Route>
         <Route path="/info/Contacto"><Contacto/></Route>
+        <Route path="/Cart"><Cart/></Route>
         <Route path="/item/:itemId"><ItemDetailContainer/></Route> 
         <Route path="/Category/:idCat"><ItemListContainer/></Route>
         <Route path="/Category/:idCat"><ItemListContainer/></Route>

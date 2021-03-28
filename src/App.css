@@ -74,3 +74,11 @@ div .card{
     background-color: #dfdde6;
     display: inline-block;
 }
+
+.show{
+  display: block;
+}
+
+.hide{
+  display: none;
+}
