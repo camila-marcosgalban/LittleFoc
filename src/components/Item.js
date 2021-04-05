@@ -1,8 +1,5 @@
- import React from "react";
- import {
-  NavLink,
-  Redirect
-} from "react-router-dom";
+import React from "react";
+import { NavLink, Redirect } from "react-router-dom";
 import Button from 'react-bootstrap/Button'
 import ItemDetailContainer from "./ItemDetailContainer";
 import ItemCount from "./ItemCount";

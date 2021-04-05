@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import ItemCount from "./ItemCount";
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import  CartContext from "../context/CartContext";
 
  function ItemDetail({detail}) {
   const maxStock = 15;
@@ -9,6 +9,17 @@ import { NavLink } from "react-router-dom";
   const [ stock, setStock] = useState (maxStock);
   const [ viewBtn, setViewBtn] = useState ("hide");
   const [ viewCount, setViewCount] = useState ("show");
+  const initial = 0;
+  const [ itemQuantity, setItemQuantity] = useState (initial);
+  const { addItem} = useContext(CartContext);
+  const item = {
+    id: detail.id,
+    title: detail.title,
+    category: detail.category,
+    description: detail.description,
+    url: detail.url,
+    price: detail.price
+  }
 
   const onAdd = (e, q) => {
     e.preventDefault();
@@ -16,7 +27,10 @@ import { NavLink } from "react-router-dom";
       alert('no hay stock');
     }else if(q <= stock){
       setStock(stock - q);
-      console.log(stock - q)
+      setItemQuantity(itemQuantity + q);
+      console.log(itemQuantity + q);
+      console.log(stock - q);
+      addItem (item, itemQuantity + q);
       alert (`Agregaste ${q} elementos al carrito`)
       setViewBtn("show");
       if((stock - q) <= 0){

@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
@@ -13,11 +9,13 @@ import QueEs from './info/QueEs';
 import Info from './info/Info';
 import Contacto from './info/Contacto';
 import Cart from './components/Cart';
+import CartProvider from './context/CartProvider';
 
 function App() {
   return (
     <React.Fragment>
       <div className="App">
+        <CartProvider>
         <Router>
         <NavBar/>
         <div>
@@ -36,6 +34,7 @@ function App() {
         </Switch>
         </div>
         </Router>
+        </CartProvider>
       </div>
     </React.Fragment>
   );

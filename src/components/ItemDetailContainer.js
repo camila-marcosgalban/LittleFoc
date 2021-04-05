@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
 import {Products} from "../components/Products";
 
