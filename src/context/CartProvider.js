@@ -36,9 +36,7 @@ const CartProvider = ({ children }) =>{
 };
     
     const removeItem = (id) => {
-        let removeCart = cart;
-        removeCart.splice(id, 1);
-        setCart(removeCart);
+        setCart(cart.filter(({ item }) => item.id !== id ));
     };
 
     const clear = () => {
