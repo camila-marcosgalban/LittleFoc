@@ -56,12 +56,14 @@ const CartProvider = ({ children }) =>{
     } 
 };
 
-    const removeItem = (id) => {
+    const removeItem = (id, q) => {
         setCart(cart.filter(({ item }) => item.id !== id ));
+        setTotalQuantity( totalQuantity - q);
     };
 
     const clear = () => {
         setCart([]);
+        setTotalQuantity(0);
     };
 
     return(
