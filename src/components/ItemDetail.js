@@ -27,9 +27,11 @@ import  CartContext from "../context/CartContext";
       alert('no hay stock');
     }else if(q <= stock){
       setStock(stock - q);
+      
       setItemQuantity(itemQuantity + q);
-      console.log(itemQuantity + q);
-      console.log(stock - q);
+      console.log("setItemQuantity " + (itemQuantity + q));
+
+      console.log("setStock " + (stock - q));
       addItem (item, itemQuantity + q);
       alert (`Agregaste ${q} elementos al carrito`)
       setViewBtn("show");
@@ -47,7 +49,7 @@ import  CartContext from "../context/CartContext";
   <h5 className="card-title">{detail.title}</h5>
   <div class="itemDetail mt-3">
         <p className="card-text">{detail.description}</p>
-  <p className="card-text">Precio: {detail.price}</p>
+  <p className="card-text">Precio: ${detail.price}</p>
         </div>
         <p>Stock: {stock}</p>
   <div className={viewCount}><ItemCount stock={stock} initial={1} onAdd={onAdd} /></div>

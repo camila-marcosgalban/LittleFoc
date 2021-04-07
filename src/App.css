@@ -56,6 +56,15 @@
   color: #5f4727;
 }
 
+.cartWidget{
+  display: inline-block;
+  background: #AD9371;
+  color:#E4D3B4;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
 /*items*/
 
 .ItemListContainer{
@@ -71,7 +80,7 @@ div .card{
 }
 
 .card .btnCardItems{
-    background-color: #dfdde6;
+    background-color: #E4D3B4;
     display: inline-block;
 }
 
@@ -81,4 +90,17 @@ div .card{
 
 .hide{
   display: none;
+}
+
+table {
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+}
+
+.imgCart{
+  width: 10%;
 }
