@@ -44,8 +44,8 @@ import  CartContext from "../context/CartContext";
   return (
     <React.Fragment>
         <div className="card" id={detail.id}>
-<img src={detail.url} className="card-img-top" alt="..." />
-<div className= {detail.category + " card-body"}>
+<img src={detail.image} className="card-img-top" alt="..." />
+<div className= {detail.categoryId + " card-body"}>
   <h5 className="card-title">{detail.title}</h5>
   <div class="itemDetail mt-3">
         <p className="card-text">{detail.description}</p>

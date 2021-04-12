@@ -9,8 +9,8 @@ import ItemCount from "./ItemCount";
   return (
     <React.Fragment>
         <div className="card" id={item.id}>
-<img src={item.url} className="card-img-top" alt="..." />
-<div className= {item.category + " card-body"}>
+<img src={item.image} className="card-img-top" alt="..." />
+<div className= {item.categoryId + " card-body"}>
   <h5 className="card-title">{item.title}</h5>
   <NavLink className="nav-link" to ={`Item/${item.id}`}>
   <Button>Ver Detalle</Button>
