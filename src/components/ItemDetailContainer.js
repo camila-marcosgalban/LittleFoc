@@ -9,14 +9,14 @@ function ItemDetailContainer() {
 
   function GetItem(id) {
     const db = getFirestore();
-    const byItem = db.collection("items").doc(id).get().then((c) => {
+    db.collection("items").doc(id).get().then((c) => {
       setDetail({id: c.id,...c.data()});
     });
   };
   
     useEffect(() => {
       GetItem(itemId);
-    });
+    }, []);
 
       return (
          <React.Fragment className="container-fluid">

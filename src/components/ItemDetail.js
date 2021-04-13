@@ -15,9 +15,9 @@ import  CartContext from "../context/CartContext";
   const item = {
     id: detail.id,
     title: detail.title,
-    category: detail.category,
+    category: detail.categoryId,
     description: detail.description,
-    url: detail.url,
+    url: detail.image,
     price: detail.price
   }
 

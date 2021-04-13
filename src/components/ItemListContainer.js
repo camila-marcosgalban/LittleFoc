@@ -4,47 +4,38 @@ import { useParams } from "react-router-dom";
 import ItemList from "../components/ItemList";
 
 function ItemListContainer() {
-
+  const db = getFirestore();
   const {idCat} = useParams();
   const [items, setItems] = useState([]);
-
-  function GetAll() {
-    const db = getFirestore();
-     const getItems = db.collection("items");
-
-      getItems.get().then((resp) => {
-        if (resp.size === 0){
-          console.log("sin datos");
-        }
-        let res = resp.docs.map(c => {
-          return {id: c.id,...c.data()}
-        });
-        setItems(res);
-       })
-     }
-    
-     function GetCategories() {
-      const db = getFirestore();
-      const byCategory = db.collection("items").where("categoryId", "==", idCat);
-       byCategory.get().then((resp) => {
-         if (resp.size === 0){
-           console.log("sin datos");
-         }
-         let res2 = resp.docs.map(c => {
-           return {id: c.id,...c.data()}
-         });
-         setItems(res2);
-        })
-     }
-
+  const getItems = db.collection("items");
   
    useEffect(() => {
-     if(idCat !== undefined){
-      GetCategories();
-     }else{
-       GetAll();
-     }
-   }, []);
+    setTimeout(() => {
+      if(idCat !== undefined){
+        getItems.where("categoryId", "==", idCat).get().then((resp) => {
+          if (resp.size === 0){
+            console.log("sin datos");
+          }
+          let res2 = resp.docs.map(c => {
+            return {id: c.id,...c.data()}
+          });
+          setItems(res2);
+         })
+
+       }else{
+        getItems.get().then((resp) => {
+          if (resp.size === 0){
+            console.log("sin datos");
+          }
+          let res = resp.docs.map(c => {
+            return {id: c.id,...c.data()}
+          });
+          setItems(res);
+         })
+         
+       }
+    }, 1000);
+   });
 
       return (
          <React.Fragment className="ItemListContainer container-fluid">
