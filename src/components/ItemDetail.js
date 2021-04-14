@@ -1,12 +1,12 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import ItemCount from "./ItemCount";
 import { NavLink } from "react-router-dom";
 import  CartContext from "../context/CartContext";
 
  function ItemDetail({detail}) {
-  const maxStock = 15;
   const minStock = 1;
-  const [ stock, setStock] = useState (maxStock);
+  const [ stock, setStock] = useState(detail.stock);
+  console.log(detail.stock);
   const [ viewBtn, setViewBtn] = useState ("hide");
   const [ viewCount, setViewCount] = useState ("show");
   const initial = 0;
@@ -17,9 +17,14 @@ import  CartContext from "../context/CartContext";
     title: detail.title,
     category: detail.categoryId,
     description: detail.description,
+    stock: detail.stock,
     url: detail.image,
     price: detail.price
   }
+
+  useEffect(() => {
+    setStock(detail.stock - itemQuantity);
+   });
 
   const onAdd = (e, q) => {
     e.preventDefault();
@@ -52,7 +57,7 @@ import  CartContext from "../context/CartContext";
   <p className="card-text">Precio: ${detail.price}</p>
         </div>
         <p>Stock: {stock}</p>
-  <div className={viewCount}><ItemCount stock={stock} initial={1} onAdd={onAdd} /></div>
+  <div className={viewCount}><ItemCount stock={stock} initial={1} onAdd={onAdd}/></div>
   <NavLink className="nav-link mx-5" to ="/Cart">
   <button className={`${viewBtn} mt-2`}>Terminar mi compra</button>
   </NavLink>

@@ -52,7 +52,7 @@ const CartProvider = ({ children }) =>{
             ...cart, 
             { item, quantity }
         ]);
-        console.log(cart)
+        console.log("cart" + cart)
     } 
 };
 
