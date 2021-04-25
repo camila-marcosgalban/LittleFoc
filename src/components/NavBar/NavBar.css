@@ -1,0 +1,25 @@
+.Nav{
+    background-color: #E4D3B4 ;
+  }
+  
+.Nav a{
+    font-family: 'Handlee', cursive;
+    font-size: medium;
+    color: #AD9371;
+    font-weight: 600;
+  }
+  
+  .Nav .logo{
+    font-size:x-large;
+    font-weight: 500;
+    font-family: 'Yellowtail', cursive;
+  }
+  
+  .Nav a:hover{
+    color: #5f4727;
+  }
+  
+  #responsive-navbar-nav{
+     text-align: right;
+     margin-right: 0.5rem;
+  }

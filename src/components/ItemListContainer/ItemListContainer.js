@@ -1,16 +1,27 @@
 import React, { useEffect, useState } from "react";
-import {getFirestore} from "../firestore"
 import { useParams } from "react-router-dom";
-import ItemList from "../components/ItemList";
+//firebase
+import {getFirestore} from "../../firestore";
+//components
+import ItemList from "../ItemList/ItemList";
+import Spinner from "../Spinner/Spinner";
 
 function ItemListContainer() {
+
+  //firestore
   const db = getFirestore();
-  const {idCat} = useParams();
-  const [items, setItems] = useState([]);
   const getItems = db.collection("items");
+
+  //params
+  const {idCat} = useParams();
+
+  //useState
+  const [items, setItems] = useState([]);
+  const [loaded, setLoeaded] = useState(false);
   
    useEffect(() => {
     setTimeout(() => {
+      setLoeaded(true);
       if(idCat !== undefined){
         getItems.where("categoryId", "==", idCat).get().then((resp) => {
           if (resp.size === 0){
@@ -34,12 +45,18 @@ function ItemListContainer() {
          })
          
        }
-    }, 500);
+    }, 1500);
    });
 
       return (
-         <React.Fragment className="ItemListContainer container-fluid">
-        <ItemList items={items}/>
+         <React.Fragment className="ItemListContainer pt-5">
+
+           <div className={loaded === false ? 'show' : 'hide' }>
+            <Spinner/>
+           </div>
+
+           <ItemList items={items}/>
+           
          </React.Fragment>
        );
       

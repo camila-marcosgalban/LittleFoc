@@ -1,0 +1,80 @@
+.cart {
+	font-family: "Handlee", cursive;
+	font-size: medium;
+}
+
+.totalCart {
+	font-size: medium;
+}
+
+table {
+	width: 90%;
+	margin-top: 1rem;
+	margin-left: 2rem;
+	font-size: 90%;
+}
+
+th {
+	background-color: #cac1eb;
+}
+
+th,
+td {
+	padding: 15px;
+	text-align: center;
+	border: #e4d3b4 solid 0.2rem;
+}
+
+.imgCart {
+	width: 10%;
+}
+
+.imgEmptyCart {
+	width: 60%;
+}
+
+.imgHappyCart {
+	width: 25%;
+}
+
+/* form */
+#nameBox,
+#lNameBox,
+#phoneBox,
+#email1Box,
+#email2Box {
+	position: relative;
+	overflow: hidden;
+}
+
+#nameBox .indicatorName,
+#lNameBox .indicatorLname,
+#phoneBox .indicatorPhone,
+#email1Box .indicatorEmail1,
+#email2Box .indicatorEmail2 {
+	position: absolute;
+	top: 45px;
+	right: 25px;
+	width: 10px;
+	height: 10px;
+	background: #cac1eb;
+	border-radius: 50%;
+}
+
+#nameBox.valid .indicatorName,
+#lNameBox.valid .indicatorLname,
+#phoneBox.valid .indicatorPhone,
+#email1Box.valid .indicatorEmail1,
+#email2Box.valid .indicatorEmail2 {
+	background: #0f0;
+	box-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 20px #0f0, 0 0 40px #0f0;
+}
+
+#nameBox.invalid .indicatorName,
+#lNameBox.invalid .indicatorLname,
+#phoneBox.invalid .indicatorPhone,
+#email1Box.invalid .indicatorEmail1,
+#email2Box.invalid .indicatorEmail2 {
+	background: #f00;
+	box-shadow: 0 0 5px #f00, 0 0 10px #f00, 0 0 20px #f00, 0 0 40px #f00;
+}

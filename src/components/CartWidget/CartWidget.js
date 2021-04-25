@@ -1,19 +1,26 @@
 import React, { useContext} from "react";
 import { NavLink } from "react-router-dom";
+//fontawesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import  CartContext from "../context/CartContext";
+//context
+import  CartContext from "../../context/CartContext";
+//css
+import "./CartWidget.css";
 
 function CartWidget() {
+
   const cartContext = useContext(CartContext);
+  
     return (
       <React.Fragment>
-        <div className={cartContext.totalQuantity !== 0 ? 'show' : 'hide' }>
+
         <NavLink className="nav-link" to ="/Cart">
           <FontAwesomeIcon icon={ faShoppingCart } /> 
-        <div className="mx-1 cartWidget">{cartContext.totalQuantity}</div>
         </NavLink>
-        </div>
+
+        <div className={`cartWidget ${cartContext.totalQuantity !== 0 ? 'show' : 'hide' }`}>{cartContext.totalQuantity}</div>
+      
       </React.Fragment>
     );
   }

@@ -39,31 +39,10 @@
 
 .App{
   background-color: #D2E1EE;
-  padding-bottom: 3rem;
 }
 
-.Nav{
-  background-color: #E4D3B4 ;
-}
-
-.Nav a{
-  font-family: 'Amatic SC', cursive;
-  font-size: larger;
-  color: #AD9371;
-}
-
-.Nav a:hover{
-  color: #5f4727;
-}
-
-.cartWidget{
-  display: inline-block;
-  background: #AD9371;
-  color:#E4D3B4;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-}
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 
 /*items*/
 
@@ -92,15 +71,15 @@ div .card{
   display: none;
 }
 
-table {
-  width: 100%;
+/*btns*/
+.btn.btn-primary{
+  background-color: #CAC1EB;
+  color: #5f4727;
+  border-color: #a599d4;
 }
 
-th, td {
-  padding: 15px;
-  text-align: center;
-}
-
-.imgCart{
-  width: 10%;
+.btn.btn-primary:hover{
+  background-color: #a599d4;
+  color: #AD9371;
+  border-color: #CAC1EB;
 }

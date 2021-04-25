@@ -1,15 +1,15 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import logo from './logo.svg';
 import './App.css';
-import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
-import ItemDetailContainer from "./components/ItemDetailContainer";
+import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import QueEs from './info/QueEs';
 import Info from './info/Info';
 import Contacto from './info/Contacto';
-import Cart from './components/Cart';
+import Cart from './components/Cart/Cart';
 import CartProvider from './context/CartProvider';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -20,19 +20,20 @@ function App() {
         <NavBar/>
         <div>
         <Switch>
-        <Route path="/info/QueEs"><QueEs/></Route>
-        <Route path="/info/Info"><Info/></Route>
-        <Route path="/info/Contacto"><Contacto/></Route>
-        <Route path="/Cart"><Cart/></Route>
-        <Route path="/item/:itemId"><ItemDetailContainer/></Route> 
-        <Route path="/Category/item/:itemId"><ItemDetailContainer/></Route> 
-        <Route path="/Category/:idCat"><ItemListContainer/></Route>
-        <Route path="/Category/:idCat"><ItemListContainer/></Route>
-        <Route path="/Category/:idCat"><ItemListContainer/></Route>
-        <Route path="/Category/:idCat"><ItemListContainer/></Route>
-        <Route exact path="/"><ItemListContainer/></Route>
+          <Route path="/info/QueEs"><QueEs/></Route>
+          <Route path="/info/Info"><Info/></Route>
+          <Route path="/info/Contacto"><Contacto/></Route>
+          <Route path="/Cart"><Cart/></Route>
+          <Route path="/item/:itemId"><ItemDetailContainer/></Route> 
+          <Route path="/Category/item/:itemId"><ItemDetailContainer/></Route> 
+          <Route path="/Category/:idCat"><ItemListContainer/></Route>
+          <Route path="/Category/:idCat"><ItemListContainer/></Route>
+          <Route path="/Category/:idCat"><ItemListContainer/></Route>
+          <Route path="/Category/:idCat"><ItemListContainer/></Route>
+          <Route exact path="/"><ItemListContainer/></Route>
         </Switch>
         </div>
+        <Footer/>
         </Router>
         </CartProvider>
       </div>

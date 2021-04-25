@@ -1,0 +1,44 @@
+/*info*/
+.info{
+    border: solid 0.5rem #CAC1EB;
+    margin: 6rem 3rem;
+    padding: 3rem;
+    font-family: 'Handlee', cursive;
+    font-weight: 600;
+    line-height: 2rem;
+  }
+  
+  .info h1{
+    margin-bottom: 2rem;
+  }
+  
+  .info p{
+    font-size: large;
+  }
+  
+  /*contacto*/
+  
+  .row .contact{
+    background-color: white;
+    padding: 0px;
+    font-family: 'Handlee', cursive;
+    font-weight: 600;
+  }
+  
+  .titleContact{
+    background-color: #CAC1EB;
+    color: white;
+    margin: 0px;
+  }
+  
+  .titleContact h1{
+    font-size: x-large;
+  }
+  
+  
+  .infoContact{
+    color: #CAC1EB;
+    text-align: left;
+    font-weight: 600;
+    font-size: large;
+  }

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+//bootstrap
+import Button from 'react-bootstrap/Button'
 
 const ItemCount = ({ stock, initial, onAdd, update }) => {
     
@@ -20,21 +22,21 @@ const ItemCount = ({ stock, initial, onAdd, update }) => {
 
     }
   }
-
-  
   
   return (
     <React.Fragment>
+      
       <div className="mb-3">
-      <button onClick={btnSubstract} className="btn btnCardItems mt-2 mx-1">-</button>
-      <button onClick={btnReset} className="btn btnCardItems mt-2 mx-1">Resetear</button>
-      <button onClick={btnAdd} className="btn btnCardItems mt-2 mx-1">+</button>
-        </div>
+        <button onClick={btnSubstract} className="btn btnCardItems mt-2 mx-1">-</button>
+        <button onClick={btnReset} className="btn btnCardItems mt-2 mx-1">Resetear</button>
+        <button onClick={btnAdd} className="btn btnCardItems mt-2 mx-1">+</button>
+      </div>
 
       <form onSubmit={ e=> onAdd(e,counter)}>
           <input className="mx-2" value={counter} />
-          <button type='submit' className="mt-2">Agregar</button>
+          <Button type='submit' className="mt-2">Agregar</Button>
       </form>
+
     </React.Fragment>
     );
   };

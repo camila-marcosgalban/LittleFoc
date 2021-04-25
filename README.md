@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Little Fox
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+_E-commerce para venta de amigurumis._
 
-## Available Scripts
+## Comenzando 🚀
 
-In the project directory, you can run:
+_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Pre-requisitos 📋
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+_Descargar e instalar [NodeJs](https://nodejs.org/en/) _
 
-### `npm test`
+### Instalación 🔧
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+_Estos pasos explican lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
 
-### `npm run build`
+_Posisionarce en un diretorio_
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+cd littleFox
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+_crear la app de react
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+npx create-react-app my-app
+```
 
-### `npm run eject`
+_y para poder iniciar el modo de desarrollo y visualizar la app:_
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+npm start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Construido con 🛠️
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+_Las herramientas que utilice para el proyecto fueron:_
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* [react](https://es.reactjs.org/) - JavaScript library
+* [react-bootstrap](https://react-bootstrap.github.io/getting-started/introduction/) - Frontend development framework 
+* [firebase](https://firebase.google.com/?hl=es) - Database
+* [fontawesome](https://fontawesome.com/how-to-use/on-the-web/using-with/react) - Iconos
+* [loading.io](https://loading.io/spinner/) - Usado para generar el loeader
 
-## Learn More
+## Autora ✒️
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* **Camila Belén Marcos Galbán** - Desarrollo completo del e-commerce- [camila-marcosgalban](https://github.com/camila-marcosgalban)

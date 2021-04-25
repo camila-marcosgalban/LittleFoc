@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from "react";
-import {getFirestore} from "../firestore"
 import { useParams } from "react-router-dom";
-import ItemDetail from "./ItemDetail";
+//firebase
+import {getFirestore} from "../../firestore"
+//components
+import ItemDetail from "../ItemDetail/ItemDetail";
 
 function ItemDetailContainer() {
+
+  //params
   const {itemId} = useParams();
+
+  //useState
   const [detail, setDetail] = useState([]);
 
   function GetItem(id) {
@@ -20,9 +26,9 @@ function ItemDetailContainer() {
 
       return (
          <React.Fragment className="container-fluid">
-        <div>
-      <ItemDetail detail={detail} />
-        </div>
+          <div>
+            <ItemDetail detail={detail} />
+          </div>
          </React.Fragment>
        );
       
